@@ -1,52 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Visal TB | Performance Marketer</title>
 
-<meta name="description" content="Performance Marketer helping brands achieve 3X–5X revenue growth through paid media and conversion optimization.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css">
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#0f0f1a;
+color:white;
+line-height:1.6;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+background:#0f0f1a;
+position:sticky;
+top:0;
+z-index:100;
+}
+
+nav h1{
+font-size:22px;
+}
+
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+font-size:14px;
+}
+
+/* HERO */
+
+.hero{
+min-height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:0 20px;
+background:linear-gradient(135deg,#111132,#1e1e4a);
+}
+
+.hero h1{
+font-size:50px;
+margin-bottom:10px;
+}
+
+.hero h2{
+font-weight:400;
+color:#8f8fff;
+margin-bottom:20px;
+}
+
+.hero p{
+max-width:650px;
+margin:auto;
+opacity:.9;
+}
+
+.cta{
+display:inline-block;
+margin-top:30px;
+padding:14px 30px;
+background:#6c63ff;
+border-radius:30px;
+text-decoration:none;
+color:white;
+font-weight:600;
+}
+
+/* SECTION */
+
+section{
+padding:80px 10%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:50px;
+font-size:32px;
+}
+
+/* ABOUT */
+
+.about p{
+max-width:800px;
+margin:10px auto;
+text-align:center;
+}
+
+/* STATS */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+margin-top:40px;
+}
+
+.stat{
+background:#1a1a2e;
+padding:30px;
+border-radius:12px;
+text-align:center;
+}
+
+.stat h3{
+font-size:32px;
+color:#6c63ff;
+}
+
+/* SERVICES */
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.service-card{
+background:#1a1a2e;
+padding:30px;
+border-radius:12px;
+transition:.3s;
+}
+
+.service-card:hover{
+transform:translateY(-8px);
+}
+
+/* CASE STUDIES */
+
+.case{
+background:#1a1a2e;
+padding:30px;
+border-radius:12px;
+margin-bottom:25px;
+}
+
+.case ul{
+margin-top:15px;
+padding-left:20px;
+}
+
+.results{
+margin-top:15px;
+color:#7dffb3;
+}
+
+/* SKILLS */
+
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+}
+
+.skill{
+background:#1a1a2e;
+padding:15px;
+border-radius:8px;
+text-align:center;
+}
+
+/* CONTACT */
+
+.contact{
+text-align:center;
+}
+
+.contact p{
+margin:10px 0;
+}
+
+.contact a{
+color:#6c63ff;
+text-decoration:none;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:30px;
+background:#0c0c16;
+margin-top:40px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:38px;
+}
+
+nav ul{
+display:none;
+}
+
+}
+
+</style>
 
 </head>
 
 <body>
 
-<!-- HERO SECTION -->
+<!-- NAVBAR -->
 
-<header class="hero">
+<nav>
 
-<div class="container">
+<h1>Visal TB</h1>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#cases">Case Studies</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div>
 
 <h1>Visal TB</h1>
 
 <h2>Performance Marketer | ROI-Focused</h2>
 
-<p class="headline">
+<p>
 Driving 3X–5X revenue growth through scalable paid media and high-converting acquisition systems.
 </p>
 
-<p class="intro">
-I help brands turn ad spend into predictable, profitable growth using structured campaign strategy, creative testing, and conversion optimization.
-</p>
-
-<a href="#contact" class="cta">Book a Strategy Discussion</a>
+<a href="#contact" class="cta">Book Strategy Discussion</a>
 
 </div>
 
-</header>
+</section>
 
 
 <!-- ABOUT -->
 
-<section class="about">
+<section id="about" class="about">
 
-<div class="container">
-
-<h2>About Me</h2>
+<h2 class="section-title">About Me</h2>
 
 <p>
 I specialize in performance marketing and conversion optimization, helping brands acquire customers efficiently through data-driven paid media strategies.
@@ -57,19 +282,10 @@ My approach combines paid advertising with structured testing, audience analysis
 </p>
 
 <p>
-Instead of focusing on vanity metrics like clicks and impressions, I focus on what truly matters: revenue growth and profitability.
+Instead of focusing on vanity metrics like clicks and impressions, I focus on revenue growth and profitability.
 </p>
 
-</div>
-
-</section>
-
-
-<!-- PERFORMANCE HIGHLIGHTS -->
-
-<section class="stats">
-
-<div class="container grid">
+<div class="stats">
 
 <div class="stat">
 <h3>12+</h3>
@@ -83,7 +299,7 @@ Instead of focusing on vanity metrics like clicks and impressions, I focus on wh
 
 <div class="stat">
 <h3>9+</h3>
-<p>Industries Worked With</p>
+<p>Industries</p>
 </div>
 
 <div class="stat">
@@ -98,42 +314,30 @@ Instead of focusing on vanity metrics like clicks and impressions, I focus on wh
 
 <!-- SERVICES -->
 
-<section class="services">
+<section id="services">
 
-<div class="container">
+<h2 class="section-title">Services</h2>
 
-<h2>Services</h2>
+<div class="services-grid">
 
-<div class="grid">
-
-<div class="card">
+<div class="service-card">
 <h3>Performance Marketing Strategy</h3>
-<p>
-Campaign planning and execution using Meta Ads and Google Ads to acquire customers profitably and scale revenue.
-</p>
+<p>Campaign planning using Meta Ads and Google Ads to scale customer acquisition.</p>
 </div>
 
-<div class="card">
-<h3>Paid Media Campaign Management</h3>
-<p>
-End-to-end campaign setup, optimization, and scaling focused on maximizing ROAS.
-</p>
+<div class="service-card">
+<h3>Paid Media Management</h3>
+<p>End-to-end campaign setup, optimization and scaling focused on ROAS.</p>
 </div>
 
-<div class="card">
+<div class="service-card">
 <h3>Conversion Rate Optimization</h3>
-<p>
-Improving landing pages and funnels through testing and user behavior analysis.
-</p>
+<p>Improving landing pages and funnels using testing and behavior insights.</p>
 </div>
 
-<div class="card">
-<h3>Analytics & Performance Tracking</h3>
-<p>
-Setting up conversion tracking and dashboards to measure and optimize performance.
-</p>
-</div>
-
+<div class="service-card">
+<h3>Analytics & Tracking</h3>
+<p>Conversion tracking and performance dashboards to measure growth.</p>
 </div>
 
 </div>
@@ -143,39 +347,35 @@ Setting up conversion tracking and dashboards to measure and optimize performanc
 
 <!-- CASE STUDIES -->
 
-<section class="cases">
+<section id="cases">
 
-<div class="container">
-
-<h2>Case Studies</h2>
+<h2 class="section-title">Case Studies</h2>
 
 <div class="case">
 
 <h3>E-commerce Brand Revenue Scaling</h3>
 
-<p><strong>Objective:</strong> Increase revenue while maintaining profitable ROAS.</p>
+<p><b>Objective:</b> Increase revenue while maintaining profitable ROAS.</p>
 
 <ul>
 <li>Restructured Meta Ads campaign architecture</li>
-<li>Introduced structured creative testing</li>
-<li>Optimized retargeting funnel</li>
-<li>Improved audience targeting</li>
+<li>Creative testing framework</li>
+<li>Retargeting funnel optimization</li>
 </ul>
 
 <p class="results">
-✔ 3X ROAS achieved  
-✔ 35% reduction in CPA  
+✔ 3X ROAS  
+✔ 35% CPA Reduction  
 ✔ Consistent revenue growth
 </p>
 
 </div>
 
-
 <div class="case">
 
 <h3>Lead Generation Campaign Optimization</h3>
 
-<p><strong>Objective:</strong> Reduce cost per lead and improve lead quality.</p>
+<p><b>Objective:</b> Reduce cost per lead.</p>
 
 <ul>
 <li>Landing page optimization</li>
@@ -184,33 +384,9 @@ Setting up conversion tracking and dashboards to measure and optimize performanc
 </ul>
 
 <p class="results">
-✔ 40% reduction in CPL  
-✔ Higher quality leads  
-✔ Improved campaign performance
+✔ 40% lower CPL  
+✔ Higher lead quality
 </p>
-
-</div>
-
-
-<div class="case">
-
-<h3>Paid Media Funnel Optimization</h3>
-
-<p><strong>Objective:</strong> Improve acquisition efficiency.</p>
-
-<ul>
-<li>Funnel restructuring</li>
-<li>Retargeting optimization</li>
-<li>Campaign testing</li>
-</ul>
-
-<p class="results">
-✔ Improved conversion rates  
-✔ Better campaign efficiency  
-✔ Scalable acquisition system
-</p>
-
-</div>
 
 </div>
 
@@ -219,46 +395,20 @@ Setting up conversion tracking and dashboards to measure and optimize performanc
 
 <!-- SKILLS -->
 
-<section class="skills">
+<section>
 
-<div class="container">
+<h2 class="section-title">Skills & Tools</h2>
 
-<h2>Skills</h2>
+<div class="skills-grid">
 
-<ul class="skill-list">
-
-<li>Performance Marketing Strategy</li>
-<li>Paid Media Campaign Management</li>
-<li>Conversion Rate Optimization</li>
-<li>Campaign Analytics</li>
-<li>Audience Targeting</li>
-<li>Funnel Optimization</li>
-
-</ul>
-
-</div>
-
-</section>
-
-
-<!-- TOOLS -->
-
-<section class="tools">
-
-<div class="container">
-
-<h2>Tools</h2>
-
-<ul class="tool-list">
-
-<li>Meta Ads Manager</li>
-<li>Google Ads</li>
-<li>Google Tag Manager</li>
-<li>Looker Studio</li>
-<li>Microsoft Clarity</li>
-<li>Hotjar</li>
-
-</ul>
+<div class="skill">Performance Marketing Strategy</div>
+<div class="skill">Paid Media Scaling</div>
+<div class="skill">Conversion Rate Optimization</div>
+<div class="skill">Campaign Analytics</div>
+<div class="skill">Meta Ads Manager</div>
+<div class="skill">Google Ads</div>
+<div class="skill">Google Tag Manager</div>
+<div class="skill">Looker Studio</div>
 
 </div>
 
@@ -269,9 +419,7 @@ Setting up conversion tracking and dashboards to measure and optimize performanc
 
 <section id="contact" class="contact">
 
-<div class="container">
-
-<h2>Contact</h2>
+<h2 class="section-title">Contact</h2>
 
 <p>Email: visaltb1018@gmail.com</p>
 
@@ -284,9 +432,7 @@ linkedin.com/in/visaltb
 </a>
 </p>
 
-<a class="cta" href="mailto:visaltb1018@gmail.com">Book Strategy Discussion</a>
-
-</div>
+<a href="mailto:visaltb1018@gmail.com" class="cta">Book Strategy Discussion</a>
 
 </section>
 
@@ -296,7 +442,6 @@ linkedin.com/in/visaltb
 <p>© 2026 Visal TB | Performance Marketing Portfolio</p>
 
 </footer>
-
 
 </body>
 </html>
