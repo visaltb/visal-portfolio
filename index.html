@@ -4,68 +4,107 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Visal | Performance Marketer</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth}
 body{background:#fff;color:#000}
 a{text-decoration:none;color:inherit}
 .container{width:90%;max-width:1200px;margin:auto}
 
+/* GLOBAL GRADIENT */
+.gradient-text{background:linear-gradient(90deg,#007bff,#00c6ff);-webkit-background-clip:text;color:transparent}
+
+.btn{
+padding:12px 26px;
+border-radius:30px;
+background:linear-gradient(90deg,#007bff,#00c6ff);
+color:#fff;
+border:none;
+cursor:pointer;
+font-weight:800;
+letter-spacing:0.5px;
+transition:0.3s;
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,123,255,0.2)}
+
+section{padding:80px 0}
+.section-title{text-align:center;font-size:32px;margin-bottom:20px}
+.section-sub{max-width:600px;margin:0 auto 40px;text-align:center;color:#555}
+
 /* NAV */
 nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
-nav ul{display:flex;gap:20px;list-style:none}
+nav ul{display:flex;gap:25px;list-style:none}
+nav ul li a{font-weight:500}
 nav ul li a:hover{color:#007bff}
 
-.btn{padding:10px 20px;border-radius:25px;background:linear-gradient(90deg,#007bff,#00c6ff);color:#fff;border:none;cursor:pointer}
-
 /* HERO */
-.hero{display:flex;align-items:center;justify-content:space-between;padding:80px 0;flex-wrap:wrap}
+.hero{display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap}
 .hero-text{flex:1}
-.hero-text h1{font-size:40px;margin-bottom:20px}
-.hero-text span{background:linear-gradient(90deg,#007bff,#00c6ff);-webkit-background-clip:text;color:transparent}
-.hero-text p{margin-bottom:20px}
-.hero-buttons{display:flex;gap:15px}
-.hero img{width:300px;border-radius:20px}
-
-/* SECTION */
-section{padding:60px 0}
-.section-title{text-align:center;font-size:28px;margin-bottom:40px}
+.hero-text h1{font-size:44px;line-height:1.2;margin-bottom:20px}
+.hero-text p{font-size:18px;color:#444;margin-bottom:25px}
+.hero-buttons{display:flex;gap:15px;flex-wrap:wrap}
+.hero img{width:320px;border-radius:20px}
 
 /* ACHIEVEMENTS */
 .achievements{display:flex;flex-wrap:wrap;justify-content:center;gap:20px}
-.achievements div{border:1px solid #eee;padding:15px 20px;border-radius:20px}
+.achievements div{
+padding:15px 20px;
+border-radius:30px;
+background:linear-gradient(90deg,#007bff,#00c6ff);
+color:#fff;
+font-weight:600;
+}
 
-/* SERVICES */
-.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
-.card{border:1px solid #eee;padding:20px;border-radius:20px;transition:0.3s}
-.card:hover{transform:translateY(-5px)}
+/* CARDS */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{
+padding:25px;
+border-radius:20px;
+border:1px solid #eee;
+transition:0.3s;
+}
+.card:hover{transform:translateY(-5px);box-shadow:0 10px 25px rgba(0,0,0,0.05)}
 
 /* PROJECTS */
-.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
-.projects img{width:100%;border-radius:15px}
+.project-card img{width:100%;border-radius:15px;margin-bottom:10px}
+.project-card h4{margin-bottom:8px}
+.project-card p{font-size:14px;color:#555}
 
 /* TOOLS */
-.tools{display:flex;flex-wrap:wrap;justify-content:center;gap:20px}
-.tools div{padding:10px 15px;border:1px solid #eee;border-radius:10px}
+.tools{display:flex;flex-wrap:wrap;justify-content:center;gap:15px}
+.tools div{
+padding:10px 18px;
+border-radius:25px;
+border:1px solid #eee;
+font-weight:500;
+}
 
 /* CONTACT */
 form{display:flex;flex-direction:column;gap:15px;max-width:500px;margin:auto}
-input,textarea{padding:10px;border:1px solid #ccc;border-radius:10px}
+input,textarea{
+padding:12px;
+border:1px solid #ccc;
+border-radius:10px;
+}
 
-.socials{text-align:center;margin-top:20px}
-.socials a{margin:0 10px;color:#007bff}
+.socials{text-align:center;margin-top:25px}
+.socials a{margin:0 10px;font-weight:600;color:#007bff}
 
+/* MOBILE */
 @media(max-width:768px){
 .hero{flex-direction:column;text-align:center}
 .hero img{margin-top:20px}
 }
 </style>
 </head>
-<body>
 
+<body>
 <div class="container">
+
+<!-- NAV -->
 <nav>
-<h2>Visal</h2>
+<h2 class="gradient-text">Visal</h2>
 <ul>
 <li><a href="#home">Home</a></li>
 <li><a href="#about">About</a></li>
@@ -77,11 +116,16 @@ input,textarea{padding:10px;border:1px solid #ccc;border-radius:10px}
 <!-- HERO -->
 <section id="home" class="hero">
 <div class="hero-text">
-<h1>I Help Brands Scale <span>Revenue</span> with Performance Marketing</h1>
-<p>Meta Ads | Google Ads | Funnels | CRO | Data Driven Growth</p>
+<h1>
+I Help Brands Scale <span class="gradient-text">Revenue 3–5X</span><br>
+Through Performance Marketing
+</h1>
+<p>
+Driving profitable growth using Meta Ads, Google Ads & high-converting funnels.
+</p>
 <div class="hero-buttons">
-<a href="#projects"><button class="btn">View Case Studies</button></a>
-<a href="#contact"><button class="btn">Contact Me</button></a>
+<a href="#projects"><button class="btn">VIEW CASE STUDIES</button></a>
+<a href="#contact"><button class="btn">GET FREE STRATEGY CALL</button></a>
 </div>
 </div>
 <img src="your-image.jpg" alt="Visal">
@@ -89,55 +133,83 @@ input,textarea{padding:10px;border:1px solid #ccc;border-radius:10px}
 
 <!-- ACHIEVEMENTS -->
 <section>
-<h2 class="section-title">Achievements</h2>
+<h2 class="section-title">Results That Speak</h2>
+<p class="section-sub">Real numbers. Real growth. Proven performance.</p>
 <div class="achievements">
 <div>15+ Projects</div>
 <div>7+ Industries</div>
 <div>₹36L+ Ad Spend</div>
-<div>5x ROAS</div>
+<div>5X ROAS</div>
 <div>2500+ Leads</div>
-<div>25% CPL Reduction</div>
+<div>25% CPL Reduced</div>
 </div>
 </section>
 
 <!-- ABOUT -->
 <section id="about">
 <h2 class="section-title">About Me</h2>
-<p style="text-align:center;max-width:800px;margin:auto">
-Performance Marketer specializing in Meta Ads & Google Ads. I build full-funnel strategies, optimize campaigns, and scale brands profitably using data-driven decisions and creative testing.
+<p class="section-sub">
+I’m a Performance Marketer focused on scaling brands profitably — not just running ads.
+I build full-funnel systems that turn clicks into revenue.
 </p>
 </section>
 
 <!-- SERVICES -->
 <section>
-<h2 class="section-title">Services</h2>
-<div class="services">
-<div class="card">Meta Ads</div>
-<div class="card">Google Ads</div>
-<div class="card">Funnel Strategy</div>
-<div class="card">Website CRO</div>
-<div class="card">KPI Analysis & Reporting</div>
+<h2 class="section-title">How I Help You Grow</h2>
+<p class="section-sub">End-to-end performance marketing solutions focused on ROI.</p>
+
+<div class="grid">
+<div class="card">
+<h4 class="gradient-text">Meta Ads</h4>
+<p>Scale revenue with high-performing creatives & targeting strategies.</p>
+</div>
+
+<div class="card">
+<h4 class="gradient-text">Google Ads</h4>
+<p>Capture high-intent traffic that converts into paying customers.</p>
+</div>
+
+<div class="card">
+<h4 class="gradient-text">Funnel Strategy</h4>
+<p>Build TOF-MOF-BOF systems that maximize conversion rates.</p>
+</div>
+
+<div class="card">
+<h4 class="gradient-text">Website CRO</h4>
+<p>Optimize landing pages to turn visitors into leads & sales.</p>
+</div>
+
+<div class="card">
+<h4 class="gradient-text">KPI & Reporting</h4>
+<p>Track what matters. Scale what works. Cut what doesn’t.</p>
+</div>
 </div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects">
 <h2 class="section-title">Case Studies</h2>
-<div class="projects">
-<div>
+<p class="section-sub">Proof over promises.</p>
+
+<div class="grid">
+<div class="project-card">
 <img src="project1.jpg">
-<p>5.3x ROAS E-commerce Scaling</p>
+<h4>5.3X ROAS E-commerce Brand</h4>
+<p>Scaled revenue 100%+ using creative testing & funnel optimization.</p>
 </div>
-<div>
+
+<div class="project-card">
 <img src="project2.jpg">
-<p>600+ Leads B2B Campaign</p>
+<h4>600+ Leads Generated</h4>
+<p>Reduced CPL by 30% with better targeting & landing page optimization.</p>
 </div>
 </div>
 </section>
 
 <!-- TOOLS -->
 <section>
-<h2 class="section-title">Tools</h2>
+<h2 class="section-title">Tools I Use</h2>
 <div class="tools">
 <div>Meta Ads</div>
 <div>Google Ads</div>
@@ -149,12 +221,14 @@ Performance Marketer specializing in Meta Ads & Google Ads. I build full-funnel 
 
 <!-- CONTACT -->
 <section id="contact">
-<h2 class="section-title">Contact Me</h2>
+<h2 class="section-title">Let’s Scale Your Brand</h2>
+<p class="section-sub">Book a free strategy call and see how we can grow your business.</p>
+
 <form>
 <input type="text" placeholder="Your Name" required>
 <input type="email" placeholder="Your Email" required>
-<textarea placeholder="Your Message"></textarea>
-<button class="btn">Send Message</button>
+<textarea placeholder="Tell me about your business"></textarea>
+<button class="btn">BOOK FREE CALL</button>
 </form>
 
 <div class="socials">
@@ -164,6 +238,5 @@ Performance Marketer specializing in Meta Ads & Google Ads. I build full-funnel 
 </section>
 
 </div>
-
 </body>
 </html>
