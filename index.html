@@ -3,285 +3,167 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Visal TB | Performance Marketing</title>
-
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<!-- Font Awesome for Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+<title>Visal | Performance Marketer</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth}
+body{background:#fff;color:#000}
+a{text-decoration:none;color:inherit}
+.container{width:90%;max-width:1200px;margin:auto}
 
-body {
-  background: #0B0B0B;
-  color: #fff;
-}
+/* NAV */
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+nav ul{display:flex;gap:20px;list-style:none}
+nav ul li a:hover{color:#007bff}
 
-/* NAVBAR */
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 8%;
-  position: sticky;
-  top: 0;
-  background: #0B0B0B;
-}
-
-nav h2 {
-  color: #3B82F6;
-}
-
-nav a {
-  color: #fff;
-  margin-left: 20px;
-  text-decoration: none;
-}
+.btn{padding:10px 20px;border-radius:25px;background:linear-gradient(90deg,#007bff,#00c6ff);color:#fff;border:none;cursor:pointer}
 
 /* HERO */
-.hero {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding: 80px 8%;
-}
+.hero{display:flex;align-items:center;justify-content:space-between;padding:80px 0;flex-wrap:wrap}
+.hero-text{flex:1}
+.hero-text h1{font-size:40px;margin-bottom:20px}
+.hero-text span{background:linear-gradient(90deg,#007bff,#00c6ff);-webkit-background-clip:text;color:transparent}
+.hero-text p{margin-bottom:20px}
+.hero-buttons{display:flex;gap:15px}
+.hero img{width:300px;border-radius:20px}
 
-.hero-text {
-  max-width: 600px;
-}
+/* SECTION */
+section{padding:60px 0}
+.section-title{text-align:center;font-size:28px;margin-bottom:40px}
 
-.hero h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-
-.hero span {
-  color: #3B82F6;
-}
-
-.hero p {
-  color: #aaa;
-  margin-bottom: 20px;
-}
-
-.btn {
-  padding: 12px 24px;
-  background: #3B82F6;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  margin-right: 10px;
-  border-radius: 6px;
-}
-
-.hero img {
-  width: 300px;
-  border-radius: 12px;
-}
-
-/* STATS */
-.stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-  padding: 60px 8%;
-  gap: 20px;
-}
-
-.stat-card {
-  background: #111;
-  padding: 30px;
-  text-align: center;
-  border-radius: 10px;
-}
-
-.stat-card h2 {
-  color: #3B82F6;
-}
+/* ACHIEVEMENTS */
+.achievements{display:flex;flex-wrap:wrap;justify-content:center;gap:20px}
+.achievements div{border:1px solid #eee;padding:15px 20px;border-radius:20px}
 
 /* SERVICES */
-.services {
-  padding: 80px 8%;
-}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+.card{border:1px solid #eee;padding:20px;border-radius:20px;transition:0.3s}
+.card:hover{transform:translateY(-5px)}
 
-.services h2 {
-  margin-bottom: 40px;
-}
+/* PROJECTS */
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.projects img{width:100%;border-radius:15px}
 
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-  gap: 20px;
-}
-
-.service-card {
-  background: #111;
-  padding: 25px;
-  border-radius: 10px;
-}
+/* TOOLS */
+.tools{display:flex;flex-wrap:wrap;justify-content:center;gap:20px}
+.tools div{padding:10px 15px;border:1px solid #eee;border-radius:10px}
 
 /* CONTACT */
-.contact {
-  padding: 80px 8%;
-}
+form{display:flex;flex-direction:column;gap:15px;max-width:500px;margin:auto}
+input,textarea{padding:10px;border:1px solid #ccc;border-radius:10px}
 
-form {
-  display: flex;
-  flex-direction: column;
-  max-width: 500px;
-}
+.socials{text-align:center;margin-top:20px}
+.socials a{margin:0 10px;color:#007bff}
 
-input, textarea {
-  margin-bottom: 15px;
-  padding: 12px;
-  border: none;
-  border-radius: 6px;
-}
-
-button {
-  background: #3B82F6;
-  color: white;
-  padding: 12px;
-  border: none;
-  cursor: pointer;
-}
-
-/* FOOTER */
-footer {
-  padding: 40px 8%;
-  text-align: center;
-}
-
-.social-icons a {
-  color: #fff;
-  margin: 10px;
-  font-size: 20px;
-}
-
-/* RESPONSIVE */
 @media(max-width:768px){
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero img {
-    margin-top: 20px;
-  }
+.hero{flex-direction:column;text-align:center}
+.hero img{margin-top:20px}
 }
 </style>
 </head>
-
 <body>
 
-<!-- NAVBAR -->
+<div class="container">
 <nav>
-  <h2>Visal</h2>
-  <div>
-    <a href="#">Home</a>
-    <a href="#">Case Studies</a>
-    <a href="#">Contact</a>
-  </div>
+<h2>Visal</h2>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 </nav>
 
 <!-- HERO -->
-<section class="hero">
-  <div class="hero-text">
-    <h1>I Help Brands Scale <span>Revenue</span> with Paid Ads</h1>
-    <p>Performance Marketing Specialist | Meta Ads | Google Ads</p>
-    <button class="btn">View Work</button>
-    <button class="btn">Contact Me</button>
-  </div>
-  <img src="https://via.placeholder.com/300" alt="profile">
+<section id="home" class="hero">
+<div class="hero-text">
+<h1>I Help Brands Scale <span>Revenue</span> with Performance Marketing</h1>
+<p>Meta Ads | Google Ads | Funnels | CRO | Data Driven Growth</p>
+<div class="hero-buttons">
+<a href="#projects"><button class="btn">View Case Studies</button></a>
+<a href="#contact"><button class="btn">Contact Me</button></a>
+</div>
+</div>
+<img src="your-image.jpg" alt="Visal">
 </section>
 
-<!-- STATS -->
-<section class="stats">
-  <div class="stat-card">
-    <h2>₹36L+</h2>
-    <p>Ad Spend Managed</p>
-  </div>
-  <div class="stat-card">
-    <h2>5x</h2>
-    <p>ROAS Achieved</p>
-  </div>
-  <div class="stat-card">
-    <h2>2500+</h2>
-    <p>Leads Generated</p>
-  </div>
-  <div class="stat-card">
-    <h2>25%</h2>
-    <p>CPL Reduction</p>
-  </div>
+<!-- ACHIEVEMENTS -->
+<section>
+<h2 class="section-title">Achievements</h2>
+<div class="achievements">
+<div>15+ Projects</div>
+<div>7+ Industries</div>
+<div>₹36L+ Ad Spend</div>
+<div>5x ROAS</div>
+<div>2500+ Leads</div>
+<div>25% CPL Reduction</div>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+<h2 class="section-title">About Me</h2>
+<p style="text-align:center;max-width:800px;margin:auto">
+Performance Marketer specializing in Meta Ads & Google Ads. I build full-funnel strategies, optimize campaigns, and scale brands profitably using data-driven decisions and creative testing.
+</p>
 </section>
 
 <!-- SERVICES -->
-<section class="services">
-  <h2>Services</h2>
-  <div class="service-grid">
-    <div class="service-card">
-      <h3>Meta Ads</h3>
-      <p>Facebook & Instagram campaign management</p>
-    </div>
-    <div class="service-card">
-      <h3>Google Ads</h3>
-      <p>Search & Display campaigns</p>
-    </div>
-    <div class="service-card">
-      <h3>Lead Generation</h3>
-      <p>High-converting funnels</p>
-    </div>
-    <div class="service-card">
-      <h3>CRO Optimization</h3>
-      <p>Improve conversion rates</p>
-    </div>
-  </div>
+<section>
+<h2 class="section-title">Services</h2>
+<div class="services">
+<div class="card">Meta Ads</div>
+<div class="card">Google Ads</div>
+<div class="card">Funnel Strategy</div>
+<div class="card">Website CRO</div>
+<div class="card">KPI Analysis & Reporting</div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+<h2 class="section-title">Case Studies</h2>
+<div class="projects">
+<div>
+<img src="project1.jpg">
+<p>5.3x ROAS E-commerce Scaling</p>
+</div>
+<div>
+<img src="project2.jpg">
+<p>600+ Leads B2B Campaign</p>
+</div>
+</div>
+</section>
+
+<!-- TOOLS -->
+<section>
+<h2 class="section-title">Tools</h2>
+<div class="tools">
+<div>Meta Ads</div>
+<div>Google Ads</div>
+<div>GTM</div>
+<div>Shopify</div>
+<div>Clarity</div>
+</div>
 </section>
 
 <!-- CONTACT -->
-<section class="contact">
-  <h2>Contact Me</h2>
-  <form id="contactForm">
-    <input type="text" id="name" placeholder="Your Name" required>
-    <input type="email" id="email" placeholder="Your Email" required>
-    <textarea id="message" placeholder="Your Message" required></textarea>
-    <button type="submit">Submit</button>
-  </form>
+<section id="contact">
+<h2 class="section-title">Contact Me</h2>
+<form>
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea placeholder="Your Message"></textarea>
+<button class="btn">Send Message</button>
+</form>
+
+<div class="socials">
+<a href="mailto:visaltb1018@gmail.com">Email</a>
+<a href="https://linkedin.com/in/visaltb" target="_blank">LinkedIn</a>
+</div>
 </section>
 
-<!-- FOOTER -->
-<footer>
-  <p>© 2026 Visal TB</p>
-  <div class="social-icons">
-    <a href="#"><i class="fab fa-linkedin"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="mailto:visaltb1018@gmail.com"><i class="fas fa-envelope"></i></a>
-  </div>
-</footer>
-
-<!-- JS -->
-<script>
-document.getElementById("contactForm").addEventListener("submit", function(e){
-  e.preventDefault();
-
-  let name = document.getElementById("name").value;
-  let email = document.getElementById("email").value;
-  let message = document.getElementById("message").value;
-
-  if(name && email && message){
-    alert("Form submitted successfully!");
-    document.getElementById("contactForm").reset();
-  } else {
-    alert("Please fill all fields.");
-  }
-});
-</script>
+</div>
 
 </body>
 </html>
