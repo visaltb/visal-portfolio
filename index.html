@@ -47,7 +47,12 @@ nav ul li a:hover{color:#007bff}
 .hero img{width:320px;border-radius:20px}
 
 /* ACHIEVEMENTS */
-.achievements{display:flex;flex-wrap:wrap;justify-content:center;gap:20px}
+.achievements{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:25px;text-align:center}
+.achievement-box{padding:25px 15px;border-radius:20px;border:1px solid #eee;transition:0.3s}
+.achievement-box:hover{transform:translateY(-5px);box-shadow:0 10px 25px rgba(0,0,0,0.05)}
+.achievement-icon{font-size:28px;margin-bottom:10px}
+.achievement-number{font-size:28px;font-weight:800;background:linear-gradient(90deg,#007bff,#00c6ff);-webkit-background-clip:text;color:transparent}
+.achievement-text{font-size:14px;color:#555}
 .achievements div{
 padding:15px 20px;
 border-radius:30px;
@@ -133,15 +138,44 @@ Driving profitable growth using Meta Ads, Google Ads & high-converting funnels.
 
 <!-- ACHIEVEMENTS -->
 <section>
-<h2 class="section-title">Results That Speak</h2>
-<p class="section-sub">Real numbers. Real growth. Proven performance.</p>
 <div class="achievements">
-<div>15+ Projects</div>
-<div>7+ Industries</div>
-<div>₹36L+ Ad Spend</div>
-<div>5X ROAS</div>
-<div>2500+ Leads</div>
-<div>25% CPL Reduced</div>
+
+<div class="achievement-box">
+<div class="achievement-icon">📊</div>
+<div class="achievement-number" data-target="15">0</div>
+<div class="achievement-text">Projects Completed</div>
+</div>
+
+<div class="achievement-box">
+<div class="achievement-icon">🌍</div>
+<div class="achievement-number" data-target="7">0</div>
+<div class="achievement-text">Industries Worked</div>
+</div>
+
+<div class="achievement-box">
+<div class="achievement-icon">💰</div>
+<div class="achievement-number" data-target="36">0</div>
+<div class="achievement-text">L+ Ad Spend</div>
+</div>
+
+<div class="achievement-box">
+<div class="achievement-icon">🚀</div>
+<div class="achievement-number" data-target="5">0</div>
+<div class="achievement-text">X ROAS Achieved</div>
+</div>
+
+<div class="achievement-box">
+<div class="achievement-icon">📈</div>
+<div class="achievement-number" data-target="2500">0</div>
+<div class="achievement-text">Qualified Leads</div>
+</div>
+
+<div class="achievement-box">
+<div class="achievement-icon">🎯</div>
+<div class="achievement-number" data-target="25">0</div>
+<div class="achievement-text">% CPL Reduced</div>
+</div>
+
 </div>
 </section>
 
@@ -161,26 +195,31 @@ I build full-funnel systems that turn clicks into revenue.
 
 <div class="grid">
 <div class="card">
+<img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" width="40">
 <h4 class="gradient-text">Meta Ads</h4>
 <p>Scale revenue with high-performing creatives & targeting strategies.</p>
 </div>
 
 <div class="card">
+<img src="https://cdn-icons-png.flaticon.com/512/300/300221.png" width="40">
 <h4 class="gradient-text">Google Ads</h4>
 <p>Capture high-intent traffic that converts into paying customers.</p>
 </div>
 
 <div class="card">
+<img src="https://cdn-icons-png.flaticon.com/512/1041/1041885.png" width="40">
 <h4 class="gradient-text">Funnel Strategy</h4>
 <p>Build TOF-MOF-BOF systems that maximize conversion rates.</p>
 </div>
 
 <div class="card">
+<img src="https://cdn-icons-png.flaticon.com/512/2920/2920349.png" width="40">
 <h4 class="gradient-text">Website CRO</h4>
 <p>Optimize landing pages to turn visitors into leads & sales.</p>
 </div>
 
 <div class="card">
+<img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png" width="40">
 <h4 class="gradient-text">KPI & Reporting</h4>
 <p>Track what matters. Scale what works. Cut what doesn’t.</p>
 </div>
@@ -211,11 +250,11 @@ I build full-funnel systems that turn clicks into revenue.
 <section>
 <h2 class="section-title">Tools I Use</h2>
 <div class="tools">
-<div>Meta Ads</div>
-<div>Google Ads</div>
-<div>GTM</div>
-<div>Shopify</div>
-<div>Clarity</div>
+<img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" width="40">
+<img src="https://cdn-icons-png.flaticon.com/512/300/300221.png" width="40">
+<img src="https://cdn-icons-png.flaticon.com/512/5968/5968342.png" width="40">
+<img src="https://cdn-icons-png.flaticon.com/512/5968/5968919.png" width="40">
+<img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" width="40">
 </div>
 </section>
 
@@ -238,5 +277,24 @@ I build full-funnel systems that turn clicks into revenue.
 </section>
 
 </div>
+<script>
+// COUNTER ANIMATION
+const counters = document.querySelectorAll('.achievement-number');
+counters.forEach(counter => {
+  const update = () => {
+    const target = +counter.getAttribute('data-target');
+    const count = +counter.innerText;
+    const increment = target / 50;
+
+    if(count < target){
+      counter.innerText = Math.ceil(count + increment);
+      setTimeout(update, 30);
+    } else {
+      counter.innerText = target;
+    }
+  };
+  update();
+});
+</script>
 </body>
 </html>
