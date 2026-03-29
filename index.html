@@ -39,15 +39,18 @@ nav ul li a{font-weight:500}
 nav ul li a:hover{color:#007bff}
 
 /* HERO */
-.hero{display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap}
+.hero{display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;min-height:85vh;padding-top:40px}
 .hero-text{flex:1}
-.hero-text h1{font-size:44px;line-height:1.2;margin-bottom:20px}
+.hero-text h1{font-size:56px;line-height:1.15;margin-bottom:20px;font-weight:800}
 .hero-text p{font-size:18px;color:#444;margin-bottom:25px}
 .hero-buttons{display:flex;gap:15px;flex-wrap:wrap}
 .hero img{width:320px;border-radius:20px}
 
 /* ACHIEVEMENTS */
-.achievements{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:30px;text-align:center;margin-top:20px}
+.achievements{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:20px;text-align:center;margin-top:30px}
+.achievement-box{padding:10px 5px;background:#fff}
+.achievement-number{font-size:28px;font-weight:700;color:#000}
+.achievement-text{font-size:13px;color:#777;margin-top:4px}
 .achievement-box{padding:20px 10px;border-radius:0;background:#fff}
 .achievement-number{font-size:34px;font-weight:800;letter-spacing:1px;background:linear-gradient(90deg,#007bff,#00c6ff);-webkit-background-clip:text;color:transparent}
 .achievement-text{font-size:14px;color:#666;margin-top:5px}
@@ -101,7 +104,13 @@ border-radius:10px;
 
 /* MOBILE */
 @media(max-width:768px){
-.hero{flex-direction:column;text-align:center}
+.hero{flex-direction:column;text-align:center;min-height:auto}
+.hero-text h1{font-size:34px}
+.hero-text p{font-size:16px}
+.hero img{margin-top:20px;width:250px}
+.achievements{grid-template-columns:repeat(3,1fr)}
+.section-title{font-size:24px}
+}
 .hero img{margin-top:20px}
 }
 </style>
@@ -180,8 +189,15 @@ Driving profitable growth using Meta Ads, Google Ads & high-converting funnels.
 <section id="about">
 <h2 class="section-title">About Me</h2>
 <p class="section-sub">
-I’m a Performance Marketer focused on scaling brands profitably — not just running ads.
-I build full-funnel systems that turn clicks into revenue.
+I don’t just run ads — I build scalable revenue systems.
+</p>
+
+<p style="max-width:800px;margin:20px auto;text-align:center;color:#444;line-height:1.6">
+I help e-commerce brands and service businesses turn ad spend into predictable profit. 
+From strategy to execution, I focus on what actually drives growth — high-converting creatives, 
+full-funnel optimization, and continuous testing.
+<br><br>
+If you're tired of wasting budget on ads that don’t convert, I help you fix the system and scale what works.
 </p>
 </section>
 
